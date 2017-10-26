@@ -58,6 +58,7 @@ returned a truthy value
 //value in the `sex` property of each object in
 //the array
 
+<<<<<<< HEAD
 function isMale(record) {
 	return record.sex === "M";
 }
@@ -71,6 +72,10 @@ function isSex(sex) {
         return record.sex === sex;
     };
 }
+=======
+
+
+>>>>>>> 4c0e8e0e335141824fc4cfcaf39d83c9d360f505
 
 
 /* SORTING
@@ -88,6 +93,7 @@ the second.
 //to sort the BABYNAMES array based on count
 //and name
 
+<<<<<<< HEAD
 function byCount(record1, record2) {
 	return record1.count - record2.count;
 }
@@ -95,11 +101,15 @@ function byCount(record1, record2) {
 function byName(record1, record2) {
 	return record1.name.localeCompare(record2.name);
 }
+=======
+
+>>>>>>> 4c0e8e0e335141824fc4cfcaf39d83c9d360f505
 
 //TODO: create a descending() function that
 //wraps a comparator function to perform a
 //descending sort instead of an ascending sort
 
+<<<<<<< HEAD
 function descending(comparator) {
 	//return a new comparator that…
 	return function(record1, record2) {
@@ -109,6 +119,9 @@ function descending(comparator) {
 }
 
 let byCountDescending = descending(byCount);
+=======
+
+>>>>>>> 4c0e8e0e335141824fc4cfcaf39d83c9d360f505
 
 /* SLICING 
 Every array has a .slice() method, which returns
@@ -120,9 +133,12 @@ up to but not include.
 //TODO: use .slice() to get the top 10 female baby 
 //name records
 
+<<<<<<< HEAD
 // let top10Females = BABYNAMES.filter(isFemale).sort(byCountDescending).slice(0,10);
 
 // Console.log(top10Females);
+=======
+>>>>>>> 4c0e8e0e335141824fc4cfcaf39d83c9d360f505
 
 /* MAPPING
 Every arrays also has a .map() method, which
@@ -138,15 +154,19 @@ the output array.
 //baby name records array into an array of strings
 //containing just the names themselves
 
+<<<<<<< HEAD
 // let pluckName = pluck(“name”);
 
 // let top10FemaleNames = BABYNAMES.filter(isFemale).sort(byCountDescending).slice(0,10).map(pluckName);
 
 // console.log(top10FemaleNames);
+=======
+>>>>>>> 4c0e8e0e335141824fc4cfcaf39d83c9d360f505
 
 //TODO: use .map() to transform those top 10
 //names into all lower case
 
+<<<<<<< HEAD
 // function toLower(str) {
 // 	return str.toLowerCase();
 // }
@@ -154,6 +174,8 @@ the output array.
 // let top10FemaleNamesLower = top10FemaleNames.map(toLower);
 
 // console.log(top10FemaleNamesLower);
+=======
+>>>>>>> 4c0e8e0e335141824fc4cfcaf39d83c9d360f505
 
 
 /* REDUCING
@@ -179,10 +201,13 @@ function randomIntegers(amount, max) {
     return randoms;
 }
 
+<<<<<<< HEAD
 let someNum = randomIntegers(10,72);
 console.log(someNum);
 
 
+=======
+>>>>>>> 4c0e8e0e335141824fc4cfcaf39d83c9d360f505
 /**
  * A reducer function to calculate the sum of
  * an array of numbers. This will be called once
@@ -194,22 +219,29 @@ console.log(someNum);
  */
 function sum(accumulator, num) {
     //TODO: implement this function
+<<<<<<< HEAD
     return accumulator + num;
+=======
+>>>>>>> 4c0e8e0e335141824fc4cfcaf39d83c9d360f505
 }
 
 //TODO: use randomIntegers() to generate an array of 
 //random integers and use .reduce() with sum*() to
 //calculate the sum of those integers.
 
+<<<<<<< HEAD
 let sumNum = someNum.reduce(sum,0);
 console.log(sumNum);
 
+=======
+>>>>>>> 4c0e8e0e335141824fc4cfcaf39d83c9d360f505
 
 //TODO: now define a max() reducer that reduces
 //an array of numbers to their maximum value.
 //Then use that with .reduce() to find the 
 //maximum value in an array of random integers.
 
+<<<<<<< HEAD
 function max(n1,n2) {
     //ternary conditonal -- look at the intro to Javascript tutorial for more
     return n2 > n1 ? n2 : n1;
@@ -225,6 +257,9 @@ function min(n1,n2) {
 
 let minNum = someNum.reduce(min,72);
 console.log(minNum);
+=======
+
+>>>>>>> 4c0e8e0e335141824fc4cfcaf39d83c9d360f505
 
 //TODO: given that a JavaScript object is really
 //just a map from strings to values, and given

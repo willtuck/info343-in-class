@@ -51,6 +51,7 @@ let state = {
 //to the page as new <tr> and <td> elements within the
 //<tbody> element that is already in the page.
 
+<<<<<<< HEAD
 //helps us build elements
 function createElem(name, value, className) {
     let elem = document.createElement(name);
@@ -107,12 +108,16 @@ render(state);
 // tablerow.appendChild(td3);
 // tableBody.appendChild(tablerow);
 // console.log(tableBody);
+=======
+
+>>>>>>> 4c0e8e0e335141824fc4cfcaf39d83c9d360f505
 
 
 //TODO: listen for the "click" event raised by the 
 //prev/next page buttons, mutate the state.currentPage,
 //and re-render
 
+<<<<<<< HEAD
 NEXT_PAGE_BUTTON.addEventListener("click", function() {
     state.currentPage++;
     render(state);
@@ -124,11 +129,14 @@ PREV_PAGE_BUTTON.addEventListener("click", function() {
     render(state);
 }
 );
+=======
+>>>>>>> 4c0e8e0e335141824fc4cfcaf39d83c9d360f505
 
 //TODO: listen for the "input" event raised by the
 //name filter <input> element, filter the state.records,
 //and re-render
 
+<<<<<<< HEAD
 NAME_FILTER_INPUT.addEventListener("input", function() {
     let q = NAME_FILTER_INPUT.value.trim().toLowerCase();
     state.records = BABYNAMES.filter(function(record) {
@@ -137,3 +145,6 @@ NAME_FILTER_INPUT.addEventListener("input", function() {
     state.currentPage = 0;
     render(state);
 });
+=======
+
+>>>>>>> 4c0e8e0e335141824fc4cfcaf39d83c9d360f505
