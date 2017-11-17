@@ -1,4 +1,5 @@
 import React from "react";
+import Task from "./Task";
 //Task
 
 export default class TaskList extends React.Component {
@@ -11,11 +12,11 @@ export default class TaskList extends React.Component {
 
     componentDidMount() {
         this.props.tasksRef.on("value",
-        snapshot => this.setState({tasksSnapshot: snapshot}))
+            snapshot => this.setState({tasksSnapshot: snapshot}))
     }
 
     componentWillUnmount() {
-        this,props.tasksRef.off("value");
+        this.props.tasksRef.off("value");
     }
 
     toggleDone() {
@@ -28,8 +29,8 @@ export default class TaskList extends React.Component {
         }
 
         let tasks = [];
-        this.state.tasksSnapshot.forEach(task => {
-            //tasks.push(<Task />)
+        this.state.tasksSnapshot.forEach(taskSnapshot => {
+            tasks.push(<Task key={taskSnapshot.key} taskSnapshot={taskSnapshot} />)
         });
 
         return (

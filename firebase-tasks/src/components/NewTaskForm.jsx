@@ -18,13 +18,12 @@ export default class NewTaskForm extends Component {
 
     render() {
         return(
-            <form onSubmit={evt => this.handleSubmit(evt)}>>
+            <form onSubmit={evt => this.handleSubmit(evt)}>
                 <input type="text"
                     clasName="Form-control"
                     value={this.state.newTaskTitle}
                     placeholder="what do you need to do?"
-                    onInput={evt => this.setState(
-                    {newTaskTitle: evt. target.value})}
+                    onInput={evt => this.setState({newTaskTitle: evt. target.value})}
                 />
             </form>
         );

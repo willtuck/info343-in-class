@@ -8,6 +8,7 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/database";
 
+// ADD FROM FIREBASE
 var config = {
     apiKey: "AIzaSyBqE8QVV1DtzIcy-yGKX2Jv9Q9Ptu_wEbs",
     authDomain: "tasks343-cacc6.firebaseapp.com",
@@ -18,6 +19,7 @@ var config = {
   };
 firebase.initializeApp(config);
 
+// ALLOWING ANONYOUS SIGNIN
 firebase.auth().signInAnonymously()
   .then(() => {
     ReactDOM.render(<App />, document.getElementById('root'));
