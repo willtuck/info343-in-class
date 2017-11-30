@@ -16,15 +16,26 @@ class Task {
     render() {
         let li = document.createElement("li");
         li.textContent = this.title;
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 179cff7cb27335f3df7fd19d5737149510a1e464
         if (this.done) {
             li.classList.add("done");
         }
 
+<<<<<<< HEAD
         li.addEventListener ("click", () => {
             this.done = !this.done;
             li.classList.toggle("done");
         });
+=======
+        li.addEventListener("click", () => {
+            this.done = !this.done;
+            li.classList.toggle("done");
+        })
+>>>>>>> 179cff7cb27335f3df7fd19d5737149510a1e464
         return li;
     }
 }
@@ -45,7 +56,11 @@ class TaskList {
     render() {
         let ul = document.createElement("ul");
         this.tasks.forEach(task => {
+<<<<<<< HEAD
             ul.appendChild(task.render())
+=======
+            ul.appendChild(task.render());
+>>>>>>> 179cff7cb27335f3df7fd19d5737149510a1e464
         });
         return ul;
     }
@@ -65,7 +80,11 @@ class Button {
 }
 
 class TaskForm {
+<<<<<<< HEAD
     //constructor() {}
+=======
+    //constuctor() {}
+>>>>>>> 179cff7cb27335f3df7fd19d5737149510a1e464
     render() {
         let form = document.createElement("form");
         form.classList.add("pb-4");
@@ -107,14 +126,27 @@ class App {
             let updatedUI = this.taskList.render();
             this.parentElem.replaceChild(updatedUI, ul);
             ul = updatedUI;
+<<<<<<< HEAD
         })
     }
 }
 
 let app = new App(document.querySelector("#app"), 
+=======
+        });
+
+    }
+}
+
+let app = new App(document.querySelector("#app"),
+>>>>>>> 179cff7cb27335f3df7fd19d5737149510a1e464
     new TaskList([
         new Task("Learn ES6 Features!"),
         new Task("Buy a Ferrari!")
     ]));
 
+<<<<<<< HEAD
 app.render();
+=======
+app.render();
+>>>>>>> 179cff7cb27335f3df7fd19d5737149510a1e464
